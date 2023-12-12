@@ -120,7 +120,7 @@ def show_cafes():
 @app.route('/delete', methods=["GET", "POST"])
 def delete():
     if request.method == "POST":
-        SECRET_KEY = "ej"
+        SECRET_KEY = os.environ.get('KEY')
         key = request.form.get('key')
         if key == SECRET_KEY:
             delete_name = request.form.get('delete_name')
