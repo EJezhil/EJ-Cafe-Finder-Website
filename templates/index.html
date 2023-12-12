@@ -50,12 +50,12 @@
 <h3 class="mx-5 my-5 px-5" style="color:red;">{{success}}</h3>
 
    <!-- Card -->
-    <div class="card-group m-4 px-lg-4">
+    <div class="card-group m-4">
     <a id="search_click" href="#{{search_found}}"></a>
 
-        <div class="card">
+        <div class="card p-4">
     {% for i in len2 %}
-    <div id="{{name[i]}}"  class="card m-5" style="width: 80%;">
+    <div id="{{name[i]}}"  class="card" style="width: 100%;">
       <div class="row g-0">
         <div class="col-md-6">
           <img  style="width: 100%; height:300px;" src="{{img[i]}}">
@@ -64,7 +64,7 @@
           <div class="card-body">
             <h4 class="card-title">{{name[i]}}</h4>
             <h5 class="card-text pt-3">📍{{location[i]}}</h5>
-            <h5 class="card-text">☕Coffe Price: {{price[i]}}</h5>
+            <h5 class="card-text">☕Coffee Price: {{price[i]}}</h5>
             <div class="pt-3">
             <p>💺Seats: {{seats[i]}} | 🌐Wifi-{{wifi[i]}}</p>
             <p>🔌Plug-{{plugs[i]}} | 🚽Toilet-{{toilet[i]}}</p>
@@ -81,9 +81,9 @@
     {% endfor %}
     </div>
 
-    <div class="card">
+    <div class="card p-4">
     {% for i in len1 %}
-    <div id="{{name[i]}}" class="card m-5" style="width: 80%;">
+    <div id="{{name[i]}}" class="card" style="width: 100%;">
       <div class="row g-0">
         <div class="col-md-6">
           <img  style="width: 100%; height:300px;" src="{{img[i]}}">
@@ -92,14 +92,14 @@
           <div class="card-body">
             <h4 class="card-title">{{name[i]}}</h4>
             <h5 class="card-text pt-3">📍{{location[i]}}</h5>
-            <h5 class="card-text">☕Coffe Price: {{price[i]}}</h5>
+            <h5 class="card-text">☕Coffee Price: {{price[i]}}</h5>
             <div class="pt-3">
             <p>💺Seats: {{seats[i]}} | 🌐Wifi-{{wifi[i]}}</p>
             <p>🔌Plug-{{plugs[i]}} | 🚽Toilet-{{toilet[i]}}</p>
              <p>📞Calls-{{can_take_calls[i]}}</p>
             </div>
             <div class="pt-2">
-            <a href="{{map[i]}}">🌏G-Map</a>
+            <a href="{{map[i]}}">🌏G-Map</a> |
             <a href="{{ url_for('update_cafe',update_cafe_id=id[i])}}">Update</a>
 
             </div>
